@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Hello world</title>
+   </head>
+   <script src = "/socket.io/socket.io.js"></script>
+   
+   <script>
+      var socket = io();
+setInterval(() => {
+  socket.emit('clientEvent', 'hey server'); // the object will be serialized for you
+}, 1000);
+   </script>
+   <body>Hello world</body>
+</html>
